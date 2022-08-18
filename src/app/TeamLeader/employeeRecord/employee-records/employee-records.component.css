@@ -1,6 +1,7 @@
 .page-wrapper {
   background: #edf1f5;
   position: relative;
+  margin-top: 30px;
 }
 
 .white-box {
@@ -16,5 +17,9 @@
 
 section{
   /* padding: 50px  ; */
-  width: 100vw;
+  width: 100%;
+  background: #edf1f5;
+
+}
+.nav{
 }

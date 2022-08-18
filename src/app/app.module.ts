@@ -7,6 +7,8 @@ import { TeamListComponent } from './TeamLeader/TeamMembers/team-list/team-list.
 import { SignInComponent } from './signIn/sign-in/sign-in.component';
 import { EmployeeRecordsComponent } from './TeamLeader/employeeRecord/employee-records/employee-records.component';
 import {ChartModule} from 'primeng/chart';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,7 @@ import {ChartModule} from 'primeng/chart';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,RouterModule,ChartModule,
+    AppRoutingModule,RouterModule,ChartModule,HttpClientModule
   ],
   exports:[ChartModule],
   providers: [],
