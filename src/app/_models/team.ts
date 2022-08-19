@@ -5,7 +5,7 @@ export class Team {
     public id:number,
     public name:string,
     public leaderId:number,
-    public members:Employee[],
+    public members:Employee[]|null,
 
   ) {
 

@@ -8,6 +8,9 @@ import { SignInComponent } from './signIn/sign-in/sign-in.component';
 import { EmployeeRecordsComponent } from './TeamLeader/employeeRecord/employee-records/employee-records.component';
 import {ChartModule} from 'primeng/chart';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { SupervisorComponent } from './TeamLeader/supervisor/supervisor.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +18,11 @@ import { HttpClientModule } from '@angular/common/http';
     TeamListComponent,
     SignInComponent,
     EmployeeRecordsComponent,
+    SupervisorComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,RouterModule,ChartModule,HttpClientModule
+    AppRoutingModule,RouterModule,ChartModule,HttpClientModule,CommonModule,FormsModule
   ],
   exports:[ChartModule],
   providers: [],

@@ -3,6 +3,8 @@
 <nav class="navbar bg-dark  navbar-dark">
   <div class="container-fluid">
     <a class="navbar-brand">Microwize</a>
+    <button class="btn btn-outline-primary" (click)="logout()" type="submit">Signout</button>
+
   </div>
 </nav>
 <div class="container">
@@ -14,7 +16,7 @@
 
 					<thead>
             <tr>
-            <td colspan="5" class="text-center"><h1>HR Team</h1></td>
+            <td colspan="5" class="text-center"><h1>{{team.name}} Team</h1></td>
 
             </tr>
 						<tr>
@@ -27,200 +29,21 @@
 					</thead>
 					<tbody>
 
-            <tr>
+            <tr *ngFor="let item of team.members; let i = index">
 							<td>
-								<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-								<a href="#" class="user-link">Mila Kunis</a>
-								<span class="user-subhead">Admin</span>
+								<img src="https://bootdey.com/img/Content/avatar/avatar{{i+1}}.png" alt="">
+								<a href="#" class="user-link">{{item.name}}</a>
+								<span class="user-subhead">{{item.role}}</span>
 							</td>
 							<td>
-								2013/08/08
+								{{item.startDate}}
+
 							</td>
 							<td class="text-center">
 								<span class="label label-default">Inactive</span>
 							</td>
 							<td>
-								<button routerLink="/EditEmployeeRecoreds/5" type="button"  class="btn btn-primary">View Total Performance</button>
-							</td>
-							<td style="width: 20%;">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                  Add Today's Status
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                  <li><a class="dropdown-item" >Present</a></li>
-                  <li><a class="dropdown-item" >Late</a></li>
-                  <li><a class="dropdown-item" >Excused Lateness</a></li>
-                  <li><a class="dropdown-item" >Casual</a></li>
-                  <li><a class="dropdown-item" >Vacation</a></li>
-                </ul>
-
-
-							</td>
-						</tr>
-            <tr>
-							<td>
-								<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-								<a href="#" class="user-link">Mila Kunis</a>
-								<span class="user-subhead">Admin</span>
-							</td>
-							<td>
-								2013/08/08
-							</td>
-							<td class="text-center">
-								<span class="label label-default">Inactive</span>
-							</td>
-							<td>
-								<button routerLink="/EditEmployeeRecoreds/5" type="button"  class="btn btn-primary">View Total Performance</button>
-							</td>
-							<td style="width: 20%;">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                  Add Today's Status
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                  <li><a class="dropdown-item" >Present</a></li>
-                  <li><a class="dropdown-item" >Late</a></li>
-                  <li><a class="dropdown-item" >Excused Lateness</a></li>
-                  <li><a class="dropdown-item" >Casual</a></li>
-                  <li><a class="dropdown-item" >Vacation</a></li>
-                </ul>
-
-
-							</td>
-						</tr>
-            <tr>
-							<td>
-								<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-								<a href="#" class="user-link">Mila Kunis</a>
-								<span class="user-subhead">Admin</span>
-							</td>
-							<td>
-								2013/08/08
-							</td>
-							<td class="text-center">
-								<span class="label label-default">Inactive</span>
-							</td>
-							<td>
-								<button routerLink="/EditEmployeeRecoreds/5" type="button"  class="btn btn-primary">View Total Performance</button>
-							</td>
-							<td style="width: 20%;">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                  Add Today's Status
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                  <li><a class="dropdown-item" >Present</a></li>
-                  <li><a class="dropdown-item" >Late</a></li>
-                  <li><a class="dropdown-item" >Excused Lateness</a></li>
-                  <li><a class="dropdown-item" >Casual</a></li>
-                  <li><a class="dropdown-item" >Vacation</a></li>
-                </ul>
-
-
-							</td>
-						</tr>
-            <tr>
-							<td>
-								<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-								<a href="#" class="user-link">Mila Kunis</a>
-								<span class="user-subhead">Admin</span>
-							</td>
-							<td>
-								2013/08/08
-							</td>
-							<td class="text-center">
-								<span class="label label-default">Inactive</span>
-							</td>
-							<td>
-								<button routerLink="/EditEmployeeRecoreds/5" type="button"  class="btn btn-primary">View Total Performance</button>
-							</td>
-							<td style="width: 20%;">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                  Add Today's Status
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                  <li><a class="dropdown-item" >Present</a></li>
-                  <li><a class="dropdown-item" >Late</a></li>
-                  <li><a class="dropdown-item" >Excused Lateness</a></li>
-                  <li><a class="dropdown-item" >Casual</a></li>
-                  <li><a class="dropdown-item" >Vacation</a></li>
-                </ul>
-
-
-							</td>
-						</tr>
-            <tr>
-							<td>
-								<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-								<a href="#" class="user-link">Mila Kunis</a>
-								<span class="user-subhead">Admin</span>
-							</td>
-							<td>
-								2013/08/08
-							</td>
-							<td class="text-center">
-								<span class="label label-default">Inactive</span>
-							</td>
-							<td>
-								<button routerLink="/EditEmployeeRecoreds/5" type="button"  class="btn btn-primary">View Total Performance</button>
-							</td>
-							<td style="width: 20%;">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                  Add Today's Status
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                  <li><a class="dropdown-item" >Present</a></li>
-                  <li><a class="dropdown-item" >Late</a></li>
-                  <li><a class="dropdown-item" >Excused Lateness</a></li>
-                  <li><a class="dropdown-item" >Casual</a></li>
-                  <li><a class="dropdown-item" >Vacation</a></li>
-                </ul>
-
-
-							</td>
-						</tr>
-            <tr>
-							<td>
-								<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-								<a href="#" class="user-link">Mila Kunis</a>
-								<span class="user-subhead">Admin</span>
-							</td>
-							<td>
-								2013/08/08
-							</td>
-							<td class="text-center">
-								<span class="label label-default">Inactive</span>
-							</td>
-							<td>
-								<button routerLink="/EditEmployeeRecoreds/5" type="button"  class="btn btn-primary">View Total Performance</button>
-							</td>
-							<td style="width: 20%;">
-                <button class="btn btn-primary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                  Add Today's Status
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                  <li><a class="dropdown-item" >Present</a></li>
-                  <li><a class="dropdown-item" >Late</a></li>
-                  <li><a class="dropdown-item" >Excused Lateness</a></li>
-                  <li><a class="dropdown-item" >Casual</a></li>
-                  <li><a class="dropdown-item" >Vacation</a></li>
-                </ul>
-
-
-							</td>
-						</tr>
-            <tr>
-							<td>
-								<img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="">
-								<a href="#" class="user-link">Mila Kunis</a>
-								<span class="user-subhead">Admin</span>
-							</td>
-							<td>
-								2013/08/08
-							</td>
-							<td class="text-center">
-								<span class="label label-default">Inactive</span>
-							</td>
-							<td>
-								<button routerLink="/EditEmployeeRecoreds/5" type="button"  class="btn btn-primary">View Total Performance</button>
+								<button routerLink="/EditEmployeeRecoreds/{{item.id}}" type="button"  class="btn btn-primary">View Total Performance</button>
 							</td>
 							<td style="width: 20%;">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">

@@ -13,4 +13,7 @@ export class TeamService {
   getAllTeams(){
     return this.http.get<Team[]>(`${environment.commonUrl}api/Teams`);
   }
+  getTeamById(id:number){
+    return this.http.get<Team>(`${environment.commonUrl}api/Teams/${id}`);
+  }
 }
