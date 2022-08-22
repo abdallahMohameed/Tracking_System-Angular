@@ -4,7 +4,7 @@ export class EmployeeMonths {
     public employeeId:number,
     public adherenceRate:number,
     public action:string,
-    public notes:number,
+    public notes:string,
   ){}
 
 }

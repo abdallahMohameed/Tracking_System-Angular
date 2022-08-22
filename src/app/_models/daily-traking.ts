@@ -1,6 +1,6 @@
 export class DailyTraking {
   constructor(
-    public date:number,
+    public date:string|null,
     public employeeID:number,
     public status:string,
   ){}
